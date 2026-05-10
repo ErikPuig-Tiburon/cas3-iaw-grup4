@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+    configVersion="3"
+    xmlns="https://www.phpdoc.org"
+>
+    <title>CAS3 IAW Gestio de Material</title>
+    <paths>
+        <output>html/phpdoc</output>
+        <cache>.phpdoc/cache</cache>
+    </paths>
+    <version number="1.0.0">
+        <api>
+            <source dsn="html">
+                <path>api</path>
+                <path>includes</path>
+                <path>professorat</path>
+                <path>alumnat</path>
+                <path>errors</path>
+                <path>index.php</path>
+                <path>login.php</path>
+                <path>logout.php</path>
+            </source>
+            <extensions>
+                <extension>php</extension>
+            </extensions>
+            <default-package-name>CAS3</default-package-name>
+        </api>
+    </version>
+</phpdocumentor>
