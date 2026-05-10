@@ -228,7 +228,7 @@ INSERT INTO Usuaris (nom, cognom1, cognom2, correu, contrasenya_hash, rol, idAlu
 ('Jan', 'CAS3', NULL, 'jan@iesmontsia.org', '$2y$10$abcdefghijklmnopqrstuuiQo633qBvjHafFtT7zjq9sxAnCMbaFi', 'PROFESSOR', NULL, 1),
 ('Ferran', 'CAS3', NULL, 'ferran@iesmontsia.org', '$2y$10$abcdefghijklmnopqrstuuiQo633qBvjHafFtT7zjq9sxAnCMbaFi', 'PROFESSOR', NULL, 1),
 ('Sergi', 'CAS3', NULL, 'sergi@iesmontsia.org', '$2y$10$abcdefghijklmnopqrstuuiQo633qBvjHafFtT7zjq9sxAnCMbaFi', 'PROFESSOR', NULL, 1),
-('Alumnat', 'CAS3', NULL, 'alumne@institutmontsia.cat', '$2y$10$abcdefghijklmnopqrstuu41ogBvzNqENxRSa3f9kXTolemOvxrke', 'ALUMNE', 1, 1)
+('Alumnat', 'CAS3', NULL, 'alumne@iesmontsia.org', '$2y$10$abcdefghijklmnopqrstuu41ogBvzNqENxRSa3f9kXTolemOvxrke', 'ALUMNE', 1, 1)
 ON DUPLICATE KEY UPDATE
     nom = VALUES(nom),
     cognom1 = VALUES(cognom1),
