@@ -50,7 +50,7 @@ La carpeta activa i publicada per Apache es `html/`.
 | CRUD Incidencies | Complet, 4 accions | `html/professorat/incidencies.php` |
 | Control de rols i acces | Funcional | `html/includes/auth.php`, `html/errors/403.php` |
 | Lloguer de portatils | Crear, modificar/tancar i eliminar | `html/professorat/assignacions.php` |
-| Documentacio | Webgrafia descriptiva i codi documentat | `docs/` i `html/phpdoc/` |
+| Documentacio | Webgrafia descriptiva i codi documentat | Document entregat |
 | Estructura, extres i atractiu visual | Complert | arquitectura per capes, API JSON, phpDocumentor, UI orbital responsive |
 
 ## Estructura del repositori
