@@ -1,0 +1,75 @@
+services:
+  # Base de datos principal con scripts de inicializacion automáticos.
+  mariadb:
+    image: mariadb:latest
+    container_name: institut_montsia
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:-root1234}
+      MARIADB_DATABASE: ${MARIADB_DATABASE:-institut_montsia}
+      MARIADB_USER: ${MARIADB_USER:-Grup4}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD:-1234}
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/01_init.sql
+      - ./sql/insert_dades.sql:/docker-entrypoint-initdb.d/02_insert_dades.sql
+    networks:
+      - cas3_net
+
+  # Herramienta web para inspeccionar y administrar MariaDB.
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: cas3_phpmyadmin
+    restart: always
+    depends_on:
+      - mariadb
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - "8080:80"
+    networks:
+      - cas3_net
+
+  # Contenedor Apache + PHP que sirve la aplicacion y monta el codigo fuente.
+  php-httpd:
+    build: .
+    container_name: cas3_php_httpd
+    restart: always
+    depends_on:
+      - mariadb
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./html:/var/www/html
+    environment:
+      APP_NAME: ${APP_NAME:-Gestio de material - Institut Montsia}
+      APP_BASE_URL: ${APP_BASE_URL:-/}
+      DB_HOST: ${DB_HOST:-institut_montsia}
+      DB_NAME: ${DB_NAME:-institut_montsia}
+      DB_USER: ${DB_USER:-Grup4}
+      DB_PASSWORD: ${DB_PASSWORD:-1234}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://10.0.70.98,https://10.0.70.98,http://10.0.70.99,https://10.0.70.99}
+      SESSION_SAMESITE: ${SESSION_SAMESITE:-Lax}
+      SESSION_SECURE: ${SESSION_SECURE:-0}
+      API_PROFESSOR_EMAIL: ${API_PROFESSOR_EMAIL:-professor@iesmontsia.org}
+      API_PROFESSOR_PASSWORD_HASH: ${API_PROFESSOR_PASSWORD_HASH:-}
+      API_PROFESSOR_NAME: ${API_PROFESSOR_NAME:-Professorat}
+      API_STUDENT_EMAIL: ${API_STUDENT_EMAIL:-alumne@institutmontsia.cat}
+      API_STUDENT_PASSWORD_HASH: ${API_STUDENT_PASSWORD_HASH:-}
+      API_STUDENT_NAME: ${API_STUDENT_NAME:-Alumnat}
+      API_STUDENT_ID: ${API_STUDENT_ID:-1}
+    networks:
+      - cas3_net
+networks:
+  # Red interna compartida por la aplicacion, la base de datos y phpMyAdmin.
+  cas3_net:
+    driver: bridge
+
+volumes:
+  # Volumen persistente para conservar los datos de MariaDB entre reinicios.
+  db_data:
