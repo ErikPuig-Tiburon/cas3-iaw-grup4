@@ -32,7 +32,7 @@ function auth_accounts()
         ],
         [
             'id' => 2, // Identificador únic per a l'alumne
-            'correu' => env_value('API_STUDENT_EMAIL', 'alumne@institutmontsia.cat'), // Correu de l'alumnat
+            'correu' => env_value('API_STUDENT_EMAIL', 'alumne@iesmontsia.org'), // Correu de l'alumnat
             'password_hash' => env_value('API_STUDENT_PASSWORD_HASH', '$2y$10$abcdefghijklmnopqrstuu41ogBvzNqENxRSa3f9kXTolemOvxrke'), // Hash de la contrasenya
             'rol' => ROLE_STUDENT, // Assigna el rol d'alumnat
             'nom' => env_value('API_STUDENT_NAME', 'Alumnat'), // Nom a mostrar
