@@ -141,20 +141,6 @@ SESSION_SAMESITE=Lax
 SESSION_SECURE=0
 ```
 
-## Documentacio del projecte
-
-Els fitxers de `docs/` estan orientats a defensa i rubrica:
-
-- `T1A_servidor_web_php.md`: servidor web, PHP i desplegament
-- `T1B_base_dades.md`: base de dades, poblament i connexio
-- `T2A_login_sessions.md`: login, sessions i rols
-- `T2B_security_cors_https.md`: control d'acces, CSRF, CORS i HTTPS
-- `T2C_crud_api.md`: CRUD i lloguer de portatils
-- `T3A_frontend_vistes.md`: frontend, UX i responsivitat
-- `DOC1_phpdocumentor.md`: documentacio del codi
-- `DOC2_memoria_tecnica.md`: memoria final amb index i conclusions
-- `DOC3_exposicio_oral.md`: guia de defensa oral
-
 ## API
 
 ```text
