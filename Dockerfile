@@ -1,6 +1,6 @@
 FROM php:8.2-apache
 
-# Instala dependencias del sistema, extensiones PHP y soporte HTTPS en Apache.
+# Instal·la dependencies del sistema, extensions PHP y soport HTTPS en Apache.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends openssl \
     && rm -rf /var/lib/apt/lists/* \
@@ -17,9 +17,9 @@ RUN apt-get update \
         -addext "subjectAltName=IP:10.0.70.99" \
     && a2ensite default-ssl
 
-# Define el directorio de trabajo donde Apache servira la aplicacion.
+# Defineix el directori de treball on Apache.
 WORKDIR /var/www/html
 
-# Sustituye la configuracion por defecto de Apache por la del proyecto.
+# Apliquem la configuracio creada al projecte a apache.
 COPY apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY apache/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
