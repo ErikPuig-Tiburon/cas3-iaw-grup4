@@ -82,7 +82,7 @@ cas3-iaw/
 ## Arrencada amb Docker
 
 ```bash
-cd /var/www/html/cas3-iaw
+cd cas3-iaw
 docker compose up -d --build
 ```
 
