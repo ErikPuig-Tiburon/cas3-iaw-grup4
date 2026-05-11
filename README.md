@@ -107,7 +107,7 @@ Comptes per defecte:
 
 ```text
 professor@iesmontsia.org / professor123
-alumne@institutmontsia.cat / alumne123
+alumne@iesmontsia.org / alumne123
 ```
 
 El login principal consulta la taula `Usuaris`. Les variables `API_*` es mantenen com a fallback d'entorn.
