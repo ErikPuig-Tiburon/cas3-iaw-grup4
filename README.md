@@ -126,21 +126,6 @@ MARIADB_USER=Grup4
 MARIADB_PASSWORD=1234
 ```
 
-Per frontend extern:
-
-```bash
-ALLOWED_ORIGINS=https://ip-o-domini-frontend
-SESSION_SAMESITE=None
-SESSION_SECURE=1
-```
-
-Per treball local simple:
-
-```bash
-SESSION_SAMESITE=Lax
-SESSION_SECURE=0
-```
-
 ## API
 
 ```text
