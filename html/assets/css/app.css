@@ -1,5 +1,14 @@
 /**
- * CAS3 · tema «òrbita» — fons còsmic, rail fix, HUD superior, vidre i cian
+ * CAS3 · tema "orbita".
+ *
+ * Hoja de estilos global de la aplicacion:
+ * - variables de color, tipografia y medidas base;
+ * - fondo visual, barra publica, HUD de sesion y rail lateral;
+ * - componentes reutilizables: cards, paneles, tablas, formularios,
+ *   botones, alertas, badges y estados vacios;
+ * - pantallas especificas de login, error, footer y responsive.
+ *
+ * Las rutas a este archivo se generan desde PHP con asset_url('css/app.css').
  */
 
 :root {

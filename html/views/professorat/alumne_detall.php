@@ -1,3 +1,13 @@
+<?php
+/**
+ * Detall d'un alumne concret amb formularis d'edicio i assignacio de material.
+ *
+ * @var array $alumne Dades de l'alumne seleccionat.
+ * @var array $availableMaterial Material encara disponible per assignar.
+ * @var array $assignments Historial i assignacions actuals de l'alumne.
+ * @var array $incidents Incidencies vinculades a l'alumne.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1><?= h(student_full_name($alumne)) ?></h1>

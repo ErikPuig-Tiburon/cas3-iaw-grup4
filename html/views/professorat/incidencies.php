@@ -1,3 +1,14 @@
+<?php
+/**
+ * Gestio d'incidencies: creacio, filtratge i canvi d'estat.
+ *
+ * @var array $students Alumnes disponibles per associar una incidencia.
+ * @var array $materials Material que pot aparèixer en una incidencia.
+ * @var array $states Estats possibles d'una incidencia.
+ * @var array $incidents Incidencies que compleixen el filtre actual.
+ * @var string $filter Filtre seleccionat, per exemple obertes o totes.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Incidencies</h1>

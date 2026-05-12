@@ -1,3 +1,14 @@
+<?php
+/**
+ * Vista del formulari public d'inici de sessio.
+ *
+ * Rep les dades preparades per login.php i mostra qualsevol error de validacio
+ * sense executar logica d'autenticacio dins la plantilla.
+ *
+ * @var string $error Missatge d'error visible, buit si no n'hi ha cap.
+ * @var string $correu Correu escrit previament per mantenir el formulari.
+ */
+?>
 <section class="gate">
     <div class="gate__stage">
         <div class="gate__orbit">

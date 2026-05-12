@@ -1,3 +1,12 @@
+<?php
+/**
+ * Gestio de comptes d'usuari per a professorat i alumnat.
+ *
+ * @var array $users Comptes existents.
+ * @var array $students Alumnes que es poden vincular a un compte.
+ * @var array|null $editUser Usuari carregat per editar o null per crear.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Usuaris</h1>

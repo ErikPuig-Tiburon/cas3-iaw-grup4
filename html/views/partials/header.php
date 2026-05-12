@@ -1,10 +1,14 @@
 <?php
-/** @var string $pageTitle */
-/** @var array|null $currentUser */
-/** @var array $flashMessages */
-$documentTitle = $pageTitle ? $pageTitle . ' | ' . APP_NAME : APP_NAME;
-$authBodyClass = $currentUser ? 'app-root--session' : 'app-root--public';
-$cssVersion = @filemtime(__DIR__ . '/../../assets/css/app.css') ?: '1';
+/**
+ * Capcalera comuna del document HTML i barra superior segons l'estat de sessio.
+ *
+ * @var string $pageTitle Titol especific de la pagina actual.
+ * @var array|null $currentUser Usuari autenticat o null en pantalles publiques.
+ * @var array $flashMessages Missatges disponibles per al parcial flash.
+ */
+$documentTitle = $pageTitle ? $pageTitle . ' | ' . APP_NAME : APP_NAME; // Combina titol de pagina i nom de l'aplicacio.
+$authBodyClass = $currentUser ? 'app-root--session' : 'app-root--public'; // Permet variar l'estil si hi ha sessio.
+$cssVersion = @filemtime(__DIR__ . '/../../assets/css/app.css') ?: '1'; // Forca recarrega del CSS quan canvia el fitxer.
 ?>
 <!DOCTYPE html>
 <html lang="ca">

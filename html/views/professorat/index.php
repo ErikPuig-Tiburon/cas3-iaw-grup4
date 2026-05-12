@@ -1,3 +1,12 @@
+<?php
+/**
+ * Panell principal del professorat amb resum de dades i accessos rapids.
+ *
+ * @var array $stats Comptadors generals del sistema.
+ * @var array $materialByType Agrupacio de material per tipus i model.
+ * @var array $recentIncidents Incidencies obertes o recents per seguiment rapid.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Panell professorat</h1>

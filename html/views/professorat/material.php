@@ -1,3 +1,14 @@
+<?php
+/**
+ * Inventari de material amb filtres i formulari d'edicio en linia.
+ *
+ * @var array $materials Material mostrat a la taula.
+ * @var array $tipusMaterial Tipus i models disponibles.
+ * @var array $ubicacions Ubicacions registrades.
+ * @var array $filters Valors aplicats als filtres.
+ * @var array|null $editMaterial Material carregat per editar o null.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Material</h1>

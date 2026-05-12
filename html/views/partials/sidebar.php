@@ -1,9 +1,13 @@
 <?php
-/** @var array|null $currentUser */
+/**
+ * Barra lateral de navegacio adaptada al rol de l'usuari autenticat.
+ *
+ * @var array|null $currentUser Usuari de sessio; si no existeix no es mostra res.
+ */
 if (!$currentUser) {
-    return;
+    return; // Evita renderitzar navegacio en pagines publiques.
 }
-$rol = $currentUser['rol'] ?? '';
+$rol = $currentUser['rol'] ?? ''; // Rol utilitzat per escollir el menu disponible.
 ?>
 <?php if ($rol === ROLE_PROFESSOR): ?>
 <aside class="rail rail--prof" aria-label="Navegació professorat">

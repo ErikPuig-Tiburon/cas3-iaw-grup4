@@ -1,3 +1,12 @@
+<?php
+/**
+ * Panell de l'alumne amb el seu material assignat i les incidencies associades.
+ *
+ * @var array $alumne Dades de l'alumne autenticat.
+ * @var array $assignments Llista d'assignacions de material.
+ * @var array $incidents Llista d'incidencies relacionades amb l'alumne.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Els meus dispositius</h1>

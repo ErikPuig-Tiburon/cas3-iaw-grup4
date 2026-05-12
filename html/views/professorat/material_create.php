@@ -1,3 +1,11 @@
+<?php
+/**
+ * Formulari d'alta de material i, si cal, del seu tipus associat.
+ *
+ * @var array $tipusMaterial Tipus existents que es poden reutilitzar.
+ * @var array $ubicacions Ubicacions disponibles per al nou dispositiu.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Nou material</h1>

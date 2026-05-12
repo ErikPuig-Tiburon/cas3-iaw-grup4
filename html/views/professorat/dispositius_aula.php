@@ -1,3 +1,11 @@
+<?php
+/**
+ * Vista de dispositius agrupats per aula o ubicacio.
+ *
+ * @var array $rooms Aules disponibles per navegar.
+ * @var array $devicesByRoom Material agrupat pel nom de l'aula.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Dispositius per aula</h1>

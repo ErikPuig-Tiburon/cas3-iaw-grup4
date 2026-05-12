@@ -1,3 +1,14 @@
+<?php
+/**
+ * Gestio d'assignacions de material a alumnat.
+ *
+ * @var array $alumnes Alumnes disponibles per crear assignacions.
+ * @var array $availableMaterial Material lliure que es pot assignar.
+ * @var array $assignments Assignacions filtrades o actives.
+ * @var array $tipusMaterial Tipus de material per al filtre.
+ * @var array $filters Valors actuals dels filtres de consulta.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Assignacions</h1>

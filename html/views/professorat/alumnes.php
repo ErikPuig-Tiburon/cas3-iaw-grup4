@@ -1,3 +1,12 @@
+<?php
+/**
+ * Vista de gestio d'alumnes: alta, edicio, cerca i eliminacio.
+ *
+ * @var array $alumnes Resultat de la cerca o llistat complet d'alumnes.
+ * @var array|null $editStudent Alumne carregat per editar o null per crear.
+ * @var string $search Text de cerca aplicat al filtre.
+ */
+?>
 <section class="page-heading">
     <div>
         <h1>Alumnes</h1>

@@ -1,3 +1,10 @@
+<?php
+/**
+ * Peu comu de totes les pagines renderitzades amb render_page().
+ *
+ * Tanca el document HTML obert a header.php i carrega el JavaScript global.
+ */
+?>
 <footer class="orbit-footer">
     <div class="orbit-footer__track">
         <span>CAS3 IAW</span>
