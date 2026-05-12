@@ -89,13 +89,11 @@ docker compose up -d --build
 Serveis disponibles:
 
 ```text
-Web HTTP:    http://localhost/
 Web HTTPS:   https://localhost/
 Login:       https://localhost/login.php
 Professorat: https://localhost/professorat/index.php
 Alumnat:     https://localhost/alumnat/index.php
 Health API:  https://localhost/api/health.php
-phpMyAdmin:  http://localhost:8080
 phpDoc:      https://localhost/phpdoc/
 ```
 

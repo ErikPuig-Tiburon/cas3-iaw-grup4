@@ -29,8 +29,6 @@ services:
       PMA_HOST: mariadb
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
-    ports:
-      - "8080:80"
     networks:
       - cas3_net
 
@@ -53,9 +51,9 @@ services:
       DB_NAME: ${DB_NAME:-institut_montsia}
       DB_USER: ${DB_USER:-Grup4}
       DB_PASSWORD: ${DB_PASSWORD:-1234}
-      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://10.0.70.98,https://10.0.70.98,http://10.0.70.99,https://10.0.70.99}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-https://10.0.70.98,https://10.0.70.99}
       SESSION_SAMESITE: ${SESSION_SAMESITE:-Lax}
-      SESSION_SECURE: ${SESSION_SECURE:-0}
+      SESSION_SECURE: ${SESSION_SECURE:-1}
       API_PROFESSOR_EMAIL: ${API_PROFESSOR_EMAIL:-professor@iesmontsia.org}
       API_PROFESSOR_PASSWORD_HASH: ${API_PROFESSOR_PASSWORD_HASH:-}
       API_PROFESSOR_NAME: ${API_PROFESSOR_NAME:-Professorat}

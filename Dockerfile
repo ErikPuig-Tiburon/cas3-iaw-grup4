@@ -23,3 +23,5 @@ WORKDIR /var/www/html
 # Apliquem la configuracio creada al projecte a apache.
 COPY apache/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY apache/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
+
+# Mantiene activos los sitios HTTP y HTTPS: HTTP solo redirige a HTTPS.
