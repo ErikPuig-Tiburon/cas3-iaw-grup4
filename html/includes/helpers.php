@@ -188,7 +188,7 @@ function nav_active($path)
  */
 function assignment_is_active($assignment)
 {
-    return empty($assignment['dataFinal']) || $assignment['dataFinal'] >= date('Y-m-d'); // Comprova si no hi ha data final o si encara no ha passat
+    return empty($assignment['dataFinal']) || $assignment['dataFinal'] > date('Y-m-d'); // Comprova si no hi ha data final o si encara no ha passat
 }
 
 /**

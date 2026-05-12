@@ -14,7 +14,7 @@ require_web_professor(); // Verifica que l'usuari té permisos de professor per 
 $stats = [ // Defineix un array amb estadístiques globals
     'alumnes' => (int) db_fetch_one('SELECT COUNT(*) AS total FROM Alumnes')['total'], // Compta el nombre total d'alumnes
     'material' => (int) db_fetch_one('SELECT COUNT(*) AS total FROM Material')['total'], // Compta el nombre total d'elements de material
-    'assignacions' => (int) db_fetch_one('SELECT COUNT(*) AS total FROM Assignacions WHERE dataFinal IS NULL OR dataFinal >= CURDATE()')['total'], // Compta les assignacions actives o futures
+    'assignacions' => (int) db_fetch_one('SELECT COUNT(*) AS total FROM Assignacions WHERE dataFinal IS NULL OR dataFinal > CURDATE()')['total'], // Compta les assignacions actives o futures
     'incidencies' => (int) db_fetch_one('SELECT COUNT(*) AS total FROM Incidencies WHERE dataTancada IS NULL')['total'], // Compta les incidències obertes
 ]; // Finalitza la definició de l'array d'estadístiques
 

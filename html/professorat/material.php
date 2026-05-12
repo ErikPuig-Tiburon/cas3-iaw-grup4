@@ -109,7 +109,7 @@ $materials = db_fetch_all( // Obté la llista de materials segons els filtres
      FROM Material m
      INNER JOIN TipusMaterial tm ON tm.id = m.idTipus
      INNER JOIN Ubicacions u ON u.id = m.idUbicacio
-     LEFT JOIN Assignacions asg ON asg.idMaterial = m.id AND (asg.dataFinal IS NULL OR asg.dataFinal >= CURDATE())
+     LEFT JOIN Assignacions asg ON asg.idMaterial = m.id AND (asg.dataFinal IS NULL OR asg.dataFinal > CURDATE())
      LEFT JOIN Alumnes a ON a.id = asg.idAlumne
      LEFT JOIN Incidencies inc ON inc.idDispositiu = m.id AND inc.dataTancada IS NULL
      LEFT JOIN Estats e ON e.id = inc.idEstat

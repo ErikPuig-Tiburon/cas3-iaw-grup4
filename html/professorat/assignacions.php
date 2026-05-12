@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Comprova si la petició és POST
                 flash('Cal seleccionar alumne i material.', 'error'); // Missatge d'error si falten dades
             } else { // Si les dades són correctes
                 $active = db_fetch_one( // Comprova si el material ja està assignat
-                    'SELECT id FROM Assignacions WHERE idMaterial = ? AND (dataFinal IS NULL OR dataFinal >= CURDATE()) LIMIT 1', // SQL de cerca d'assignació activa
+                    'SELECT id FROM Assignacions WHERE idMaterial = ? AND (dataFinal IS NULL OR dataFinal > CURDATE()) LIMIT 1', // SQL de cerca d'assignació activa
                     [$idMaterial] // Paràmetre del material
                 ); // Final de la comprovació
 
@@ -81,7 +81,7 @@ $availableMaterial = db_fetch_all( // Obté material que no està assignat actua
      INNER JOIN TipusMaterial tm ON tm.id = m.idTipus
      WHERE NOT EXISTS (
         SELECT 1 FROM Assignacions a
-        WHERE a.idMaterial = m.id AND (a.dataFinal IS NULL OR a.dataFinal >= CURDATE())
+        WHERE a.idMaterial = m.id AND (a.dataFinal IS NULL OR a.dataFinal > CURDATE())
      )
      ORDER BY tm.tipus, m.idInventari, m.id'
 ); // Final de consulta de material disponible
@@ -126,7 +126,7 @@ $assignments = db_fetch_all( // Obté el llistat d'assignacions actuals segons e
      FROM Material m
      INNER JOIN TipusMaterial tm ON tm.id = m.idTipus
      INNER JOIN Ubicacions u ON u.id = m.idUbicacio
-     LEFT JOIN Assignacions asg ON asg.idMaterial = m.id AND (asg.dataFinal IS NULL OR asg.dataFinal >= CURDATE())
+     LEFT JOIN Assignacions asg ON asg.idMaterial = m.id AND (asg.dataFinal IS NULL OR asg.dataFinal > CURDATE())
      LEFT JOIN Alumnes al ON al.id = asg.idAlumne
      $where
      ORDER BY tm.tipus, tm.model, m.idInventari, m.id",
