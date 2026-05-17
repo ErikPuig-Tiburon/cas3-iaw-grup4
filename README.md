@@ -18,11 +18,11 @@ Aplicacio web PHP sense frameworks per gestionar alumnat, material, assignacions
 
 El sistema resol una necessitat real del centre:
 
-- mantenir un inventari de dispositius
-- assignar material a alumnat
-- gestionar devolucions o tancaments de prestec
-- registrar incidencies obertes i tancades
-- limitar l'acces segons el rol de professorat o alumnat
+- Mantenir un inventari de dispositius
+- Assignar material a alumnat
+- Gestionar devolucions o tancaments de prestec
+- Registrar incidencies obertes i tancades
+- Limitar l'acces segons el rol de professorat o alumnat
 
 La carpeta activa i publicada per Apache es `html/`.
 
@@ -166,10 +166,10 @@ https://localhost/phpdoc/
 El projecte cobreix els punts importants de la rubrica amb evidencies clares al codi i a la documentacio:
 
 - CRUD complets en alumnes, material i incidencies
-- rols i control d'acces funcionals
-- assignacio, tancament i eliminacio de lloguers de portatils
-- arquitectura ordenada per capes
-- codi comentat i documentat amb phpDocumentor
-- interfície visual treballada i responsive
+- Rols i control d'acces funcionals
+- Assignacio, tancament i eliminacio de lloguers de portatils
+- Arquitectura ordenada per capes
+- Codi comentat i documentat amb phpDocumentor
+- Interfície visual treballada i responsive
 
 Com a extres, el projecte afegeix una API JSON, una documentacio HTML navegable, una capa visual moderna i una separacio neta entre controladors, vistes, helpers i base de dades.
