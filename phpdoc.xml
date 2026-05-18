@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<phpdocumentor
-    configVersion="3"
-    xmlns="https://www.phpdoc.org"
->
+<phpdocumentor configVersion="3" xmlns="https://www.phpdoc.org" >
     <title>CAS3 IAW Gestio de Material</title>
     <paths>
         <output>html/phpdoc</output>
