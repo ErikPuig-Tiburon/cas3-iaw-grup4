@@ -2,7 +2,7 @@
 
 /** // Inici del bloc de comentaris de documentació
  * Detall d'un alumne i dels seus dispositius assignats. // Descripció de la funcionalitat
- * // Línia buida de documentació
+ * 
  * @package CAS3 // Defineix el paquet
  */ // Final del bloc de comentaris
 

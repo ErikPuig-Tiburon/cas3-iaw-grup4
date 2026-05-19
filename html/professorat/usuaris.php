@@ -2,7 +2,7 @@
 
 /** // Inici del bloc de comentaris de documentació
  * Gestio d'usuaris d'acces a l'aplicacio. // Descripció de la funcionalitat del fitxer
- * // Línia buida de documentació
+ * 
  * @package CAS3 // Defineix el paquet al qual pertany el fitxer
  */ // Final del bloc de comentaris de documentació
 

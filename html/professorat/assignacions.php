@@ -2,7 +2,7 @@
 
 /** // Inici del bloc de comentaris de documentació
  * Gestio d'assignacions de material a alumnes. // Descripció de la funcionalitat
- * // Línia buida de documentació
+ * 
  * @package CAS3 // Defineix el paquet
  */ // Final del bloc de comentaris
 

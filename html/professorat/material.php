@@ -2,7 +2,7 @@
 
 /** // Inici del bloc de comentaris de documentació
  * Llistat de material del centre. // Descripció de la funcionalitat
- * // Línia buida de documentació
+ * 
  * @package CAS3 // Defineix el paquet
  */ // Final del bloc de comentaris
 

@@ -2,7 +2,7 @@
 
 /** // Inici del bloc de comentaris de documentació
  * Panell principal del professorat. // Descripció de la funcionalitat del fitxer
- * // Línia buida de documentació
+ * 
  * @package CAS3 // Defineix el paquet al qual pertany el fitxer
  */ // Final del bloc de comentaris de documentació
 
